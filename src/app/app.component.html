@@ -1,8 +1,8 @@
 <div>
   <nav>
-    <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">First Page</a>
-    <a routerLink="/second" routerLinkActive="active">Second Page</a>
-    <a routerLink="/third" routerLinkActive="active">Third Page</a>
+    <button class="nav-button" (click)="goFirst()">First Page</button>
+    <button class="nav-button" (click)="goSecond()">Second Page</button>
+    <button class="nav-button" (click)="goThird()">Third Page</button>
   </nav>
 </div>
 <router-outlet></router-outlet>

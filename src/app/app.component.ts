@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {RouterOutlet, RouterLink, RouterLinkActive} from '@angular/router';
+import {RouterOutlet, RouterLink, RouterLinkActive, Router} from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 
@@ -13,4 +13,14 @@ import { FormsModule } from '@angular/forms';
 export class AppComponent {
   title = 'AngularApp';
 
+  constructor(private router: Router) {}
+  goFirst(): void {
+    this.router.navigateByUrl('/');
+  }
+  goSecond(): void {
+    this.router.navigateByUrl('/second');
+  }
+  goThird(): void {
+    this.router.navigateByUrl('/third');
+  }
 }
