@@ -1,7 +1,11 @@
 import { Component } from '@angular/core';
 import {RouterOutlet, RouterLink, RouterLinkActive, Router} from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { ActivatedRouteSnapshot, RouterStateSnapshot } from "@angular/router";
 
+export const confirmGuard = (route: ActivatedRouteSnapshot, state: RouterStateSnapshot) => {
+  return confirm("Are you sure you want to go?");
+};
 
 @Component({
   selector: 'app-root',
