@@ -1,0 +1,42 @@
+{
+  "cars": [
+    {
+      "brand": "Toyota",
+      "model": "Camry",
+      "year": 2022,
+      "color": "silver",
+      "automatic_transmission": true,
+      "engine": {
+        "type": "petrol",
+        "displacement": 2.5,
+        "horsepower": 203
+      },
+      "options": ["leather seats", "heated seats", "rear view camera"]
+    },
+    {
+      "brand": "BMW",
+      "model": "X5",
+      "year": 2023,
+      "color": "black",
+      "automatic_transmission": true,
+      "engine": {
+        "type": "diesel",
+        "displacement": 3.0,
+        "horsepower": 265
+      },
+      "options": ["navigation system", "panoramic roof", "tire pressure monitoring system"]
+    },
+    {
+      "brand": "Tesla",
+      "model": "Model 3",
+      "year": 2024,
+      "color": "red",
+      "automatic_transmission": true,
+      "engine": {
+        "type": "electric",
+        "power_kW": 211
+      },
+      "options": ["autopilot", "remote access", "premium audio system"]
+    }
+  ]
+}
