@@ -1,0 +1,13 @@
+.wrapper-flex {
+  display: flex;
+  justify-content: space-around;
+}
+
+.h2-main {
+  font-size: 40px;
+  text-align: center;
+}
+
+.markers li::marker {
+  color: green;
+}

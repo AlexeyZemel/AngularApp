@@ -27,4 +27,10 @@ export class AppComponent {
   goThird(): void {
     this.router.navigateByUrl('/third');
   }
+  goChild(): void {
+    this.router.navigateByUrl('/child');
+  }
+  goParent(): void {
+    this.router.navigateByUrl('/parent');
+  }
 }

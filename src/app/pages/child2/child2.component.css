@@ -1,0 +1,20 @@
+.alert {
+  color: red;
+}
+input.ng-invalid {
+  border:solid red 2px;
+}
+input.ng-untouched {
+  border:solid red 2px;
+}
+input.ng-valid {
+  border:solid green 2px;
+}
+.send {
+  font-size: 20px;
+  background-color: #b472a9;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 5px 0;
+}
+

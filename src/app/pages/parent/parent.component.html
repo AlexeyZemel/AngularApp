@@ -1,0 +1,22 @@
+<h2 class="h2-main">This is parent!</h2>
+<div class="wrapper-flex">
+  <div><app-child (sendForm)="onFormSaved1($event)"></app-child>
+    <h2>Students</h2>
+    <ul class="markers">
+      @for (dat of students1; track $index){
+        <li>{{dat.name}}, {{dat.age}}, {{dat.group}}</li>
+      }
+    </ul>
+  </div>
+  <div><app-child2 (sendForm)="onFormSaved2($event)"></app-child2>
+    <h2>Students2</h2>
+    <ul class="markers">
+      @for (dat of students2; track $index){
+        <li>{{dat.name}}, {{dat.age}}, {{dat.group}}</li>
+      }
+    </ul>
+  </div>
+</div>
+
+
+

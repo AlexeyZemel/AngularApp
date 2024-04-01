@@ -1,0 +1,36 @@
+<h2>This is child!</h2>
+
+<form #form="ngForm" novalidate (ngSubmit)="onSubmit(form)">
+  <div>
+    <label>Name </label>
+    <input type="text" name="name" [(ngModel)]="name" #usName="ngModel" required pattern="^[a-zA-Z]{1,20}$"/>
+  </div>
+  <div class="alert" [hidden]="usName.valid || usName.touched">
+    Name is required!
+  </div>
+  <div>
+    <label>Age </label>
+    <input type="number" name="age" [(ngModel)]="age" #usAge="ngModel" required pattern="[1-9]{2}"/>
+  </div>
+  <div class="alert" [hidden]="usAge.valid || usAge.touched">
+    Age is required!
+  </div>
+  <div>
+    <label>Group </label>
+    <select name="group" [(ngModel)]="group" #usGroup="ngModel" required>
+     @for(gr of groups; track $index){
+       <option [value]="gr">
+         {{gr}}
+       </option>
+     }
+    </select>
+  </div>
+  <div class="alert" [hidden]="usGroup.touched">
+    Group is required!
+  </div>
+  <input class="send" type="submit" [disabled]="form.invalid" value="Send" />
+</form>
+
+<ng-content>
+
+</ng-content>

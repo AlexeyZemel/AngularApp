@@ -1,0 +1,42 @@
+<h2>This is child2!</h2>
+
+<form [formGroup]="myForm" novalidate (ngSubmit)="onSubmit()">
+  <div>
+    <label>Name </label>
+    <input type="text" name="name" formControlName="name" />
+    @if(myForm.controls["name"].invalid || myForm.controls["name"].untouched) {
+      <div class="alert">
+        Name is required!
+      </div>
+    }
+  </div>
+  <div>
+    <label>Age </label>
+    <input type="number" name="age" formControlName="age" />
+    @if(myForm.controls["age"].invalid || myForm.controls["age"].untouched) {
+      <div class="alert">
+        Age is required!
+      </div>
+    }
+  </div>
+  <div>
+    <label>Group </label>
+    <select name="group" formControlName="group">
+      @for(gr of groups; track $index){
+        <option [value]="gr">
+          {{gr}}
+        </option>
+      }
+    </select>
+    @if(myForm.controls["group"].untouched) {
+      <div class="alert">
+        Group is required!
+      </div>
+    }
+  </div>
+  <input class="send" type="submit" [disabled]="myForm.invalid" value="Send" />
+</form>
+
+<ng-content>
+
+</ng-content>
